@@ -324,8 +324,12 @@ public class Pay {
     private String mDescripition;
 
     private String mPlace;
+    
+    private String mDescription; // nao incluiu
 
-    public Museum(@Nullable String description, String place, int score, String creationDate) {
+    //1. alteracao do construtor da classe de Museum para Pay
+    //2. inclusao do argumento 'amount' no construtor 
+    public Pay(@Nullable String description, String place, int score, String creationDate, double amount) {
         mDescription = description;
         mPlace = place;
         mAmount = amount;
@@ -352,15 +356,15 @@ public class Pay {
         return mPlace;
     }
 
-    public void setPlace(String style) {
+    public void setPlace(String place) {
         mPlace = place;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return mAmount;
     }
 
-    public void setAmount(int score) {
+    public void setAmount(double amount) {
         mAmount = amount;
     }
 
@@ -372,7 +376,7 @@ public class Pay {
         mCreationDate = creationDate;
     }
 
-    private int mAmount;
+  private double mAmount;
     private String mCreationDate;
 
 }
